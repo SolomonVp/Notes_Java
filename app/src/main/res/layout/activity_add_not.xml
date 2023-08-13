@@ -66,8 +66,8 @@
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:background="@android:color/holo_green_light"
+            android:checked="true"
             android:text="@string/priority_3" />
     </RadioGroup>
 
