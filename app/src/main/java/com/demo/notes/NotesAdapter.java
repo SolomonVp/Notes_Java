@@ -40,8 +40,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
         Note note = notes.get(i);
         notesViewHolder.textViewTitle.setText(note.getTitle());
         notesViewHolder.textViewDescription.setText(note.getDescription());
-        notesViewHolder.textViewDayOfWeek.setText(note.getDayOfWeek());
-//        notesViewHolder.textViewPriority.setText(String.format("%s", note.getPriority()));
+        notesViewHolder.textViewDayOfWeek.setText(Note.getDayAsString(note.getDayOfWeek()));
 
         int colorId;
         int priority = note.getPriority();
@@ -68,14 +67,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
         private TextView textViewTitle;
         private TextView textViewDescription;
         private TextView textViewDayOfWeek;
-//        private TextView textViewPriority;
+
 
         public NotesViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewDescription = itemView.findViewById(R.id.textViewDescription);
             textViewDayOfWeek = itemView.findViewById(R.id.textViewDayOfWeek);
-//            textViewPriority = itemView.findViewById(R.id.textViewPriority);
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
